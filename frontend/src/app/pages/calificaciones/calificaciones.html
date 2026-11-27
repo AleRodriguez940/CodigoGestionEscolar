@@ -1,0 +1,54 @@
+
+<div class="contenedor">
+
+  <h1>Gestión de calificaciones</h1>
+
+  <p class="descripcion">
+    Consulta las calificaciones registradas de los alumnos.
+  </p>
+
+  <!-- Mensajes -->
+  <p *ngIf="cargando">Cargando calificaciones...</p>
+
+  <p class="error" *ngIf="mensajeError">
+    {{ mensajeError }}
+  </p>
+
+  <!-- Tabla de calificaciones -->
+  <div class="tabla-contenedor" *ngIf="!cargando && !mensajeError">
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID Alumno</th>
+          <th>ID Materia</th>
+          <th>Parcial</th>
+          <th>Calificación</th>
+          <th>Periodo</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let calificacion of calificaciones">
+          <td>{{ calificacion.id_alumno }}</td>
+          <td>{{ calificacion.id_materia }}</td>
+          <td>{{ calificacion.parcial }}</td>
+          <td>{{ calificacion.calificacion }}</td>
+          <td>{{ calificacion.periodo }}</td>
+        </tr>
+
+        <tr *ngIf="calificaciones.length === 0">
+          <td colspan="5">
+            No se encontraron calificaciones.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <p class="total">
+    Total de calificaciones encontradas: {{ calificaciones.length }}
+  </p>
+
+</div>

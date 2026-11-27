@@ -1,0 +1,75 @@
+.contenedor {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #243b53;
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  color: #627d98;
+  margin-bottom: 25px;
+}
+
+.buscador {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.buscador input {
+  width: 350px;
+  padding: 11px;
+  border: 1px solid #bcccdc;
+  border-radius: 6px;
+}
+
+button {
+  background: #1769aa;
+  color: white;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0d4f85;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 13px;
+  border: 1px solid #d9e2ec;
+  text-align: left;
+}
+
+th {
+  background: #eaf2f8;
+  color: #243b53;
+}
+
+tbody tr:hover {
+  background: #f0f5f9;
+}
+
+.total {
+  margin-top: 18px;
+  font-weight: bold;
+  color: #334e68;
+}
+
+.error {
+  color: #c0392b;
+}

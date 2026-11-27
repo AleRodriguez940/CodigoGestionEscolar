@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.encabezado {
+  background: #183b56;
+  color: white;
+  padding: 22px 35px;
+}
+
+.encabezado h1 {
+  margin: 0 0 6px;
+}
+
+.encabezado p {
+  margin: 0;
+  color: #d9eaf7;
+}
+
+main {
+  max-width: 1400px;
+  margin: auto;
+}

@@ -1,0 +1,49 @@
+.contenedor {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #243b53;
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  color: #627d98;
+  margin-bottom: 25px;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 13px;
+  border: 1px solid #d9e2ec;
+  text-align: left;
+}
+
+th {
+  background: #eaf2f8;
+  color: #243b53;
+}
+
+tbody tr:hover {
+  background: #f0f5f9;
+}
+
+.total {
+  margin-top: 18px;
+  font-weight: bold;
+  color: #334e68;
+}
+
+.error {
+  color: #c0392b;
+}

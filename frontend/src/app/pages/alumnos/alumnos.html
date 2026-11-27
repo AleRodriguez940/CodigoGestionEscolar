@@ -1,0 +1,66 @@
+<div class="contenedor">
+
+  <h1>Gestión de alumnos</h1>
+  <p class="descripcion">
+    Consulta y busca los alumnos registrados en el sistema escolar.
+  </p>
+
+  <!-- Buscador -->
+  <div class="buscador">
+    <input
+      type="text"
+      placeholder="Buscar por nombre o correo..."
+      [(ngModel)]="buscar"
+      (keyup.enter)="consultarAlumnos()"
+    >
+
+    <button (click)="consultarAlumnos()">
+      Buscar
+    </button>
+  </div>
+
+  <!-- Mensajes -->
+  <p *ngIf="cargando">Cargando alumnos...</p>
+
+  <p class="error" *ngIf="mensajeError">
+    {{ mensajeError }}
+  </p>
+
+  <!-- Tabla -->
+  <div class="tabla-contenedor" *ngIf="!cargando && !mensajeError">
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Carrera</th>
+          <th>Edad</th>
+          <th>Grupo</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let alumno of alumnos">
+          <td>{{ alumno.id_alumno }}</td>
+          <td>{{ alumno.nombre_alumno }}</td>
+          <td>{{ alumno.correo_alumno }}</td>
+          <td>{{ alumno.carrera_alumno }}</td>
+          <td>{{ alumno.edad_alumno }}</td>
+          <td>{{ alumno.id_grupo }}</td>
+        </tr>
+
+        <tr *ngIf="alumnos.length === 0">
+          <td colspan="6">No se encontraron alumnos.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <p class="total">
+    Total de alumnos encontrados: {{ alumnos.length }}
+  </p>
+
+</div>
